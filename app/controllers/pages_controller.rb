@@ -1,8 +1,7 @@
 class PagesController < ApplicationController
   def main
   end
-
-
+  
   def show
     new_params = { name: '', hobby: ''}
     new_params[:name] = params[:name]
@@ -12,5 +11,4 @@ class PagesController < ApplicationController
     session[:students] = new_params
     redirect_to "/"
   end
-
 end

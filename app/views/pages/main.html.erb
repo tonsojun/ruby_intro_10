@@ -1,0 +1,22 @@
+<h1>Intro 10</h1>
+
+<%= form_with url: "/show", method: :post do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :hobby, "Hobby" %>
+  <%= form.text_field :hobby %>
+
+  <%= form.label :favorite_food, "Favorite Food" %>
+  <%= form.text_field :favorite_food %>
+
+  <%= form.submit "Submit" %>
+<% end %>
+
+<% session[:students].each do |student| %>
+  <%= student[0] %>: <%= student[1]%> : <%student[2]%>
+<%end%> <br>
+
+
+<a href="/">Back to all students</a>
+

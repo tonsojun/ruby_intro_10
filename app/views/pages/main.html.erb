@@ -10,11 +10,14 @@
   <%= form.label :favorite_food, "Favorite Food" %>
   <%= form.text_field :favorite_food %>
 
+  <%= form.label :favorite_color, "Favorite Color" %>
+  <%= form.text_field :favorite_color %>
+
   <%= form.submit "Submit" %>
 <% end %>
 
 <% session[:students].each do |student| %>
-  <%= student[0] %>: <%= student[1]%> : <%student[2]%>
+  <%= student[0] %>: <%= student[1]%>  <%student[2]%> <%student[3]%>
 <%end%> <br>
 
 

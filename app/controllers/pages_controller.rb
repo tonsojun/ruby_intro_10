@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
   
   def show
-    new_params = { name: '', hobby: ''}
+    new_params = { name: '', hobby: '', favorite_food: '', favorite_color: ''}
     new_params[:name] = params[:name]
     new_params[:hobby] = params[:hobby]
     new_params[:favorite_food] = params[:favorite_food]

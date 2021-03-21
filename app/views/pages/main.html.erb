@@ -10,12 +10,30 @@
 
   <%= form.submit "Submit" %>
 <% end %>
+<table>
 
-<% Student.all %>
+  <tr>
+    <th><%= "Name" %></th>
+    <th><%= "Hobby" %></th>
+  </tr>
+
+  <% Student.all.each do |student| %>
+    <tr>
+      <td><%= student.name %></td>
+      <td><%= student.hobby %></td>
+    </tr>
+  <% end %>
+
+</table>
+<%= Student.all %> <br>
 
 <%= Student.count %> <br>
 
 <%= Student.last %><br>
 
 <a href="/">Back to all students</a>
+
+
+
+
 

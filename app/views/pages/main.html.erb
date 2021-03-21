@@ -11,10 +11,11 @@
   <%= form.submit "Submit" %>
 <% end %>
 
-<% session[:students].each do |student| %>
-  <%= student[0] %>: <%= student[1]%> 
-<%end%> <br>
+<% Student.all %>
 
+<%= Student.count %> <br>
+
+<%= Student.last %><br>
 
 <a href="/">Back to all students</a>
 

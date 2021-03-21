@@ -13,7 +13,7 @@ class PagesController < ApplicationController
   end
 =end
   def index
-    @student = Student.all
+    @students = Student.all
   end
 
   def new

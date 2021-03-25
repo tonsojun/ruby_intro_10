@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_25_045523) do
+ActiveRecord::Schema.define(version: 2021_03_25_050432) do
 
   create_table "students", force: :cascade do |t|
     t.string "name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_03_25_045523) do
     t.string "favorite_color"
     t.string "pokemon"
     t.decimal "lucky_number"
+    t.date "birthday"
   end
 
 end

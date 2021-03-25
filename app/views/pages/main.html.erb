@@ -25,6 +25,7 @@
     <th><%= "Favorite Color" %></th>
     <th><%= "Pokemon" %></th>
     <th><%= "Lucky Number" %></th>
+    <th><%= "Birthday" %></th>
   </tr>
 
   <% Student.all.each do |student| %>
@@ -35,6 +36,7 @@
       <td><%= student.favorite_color %></td>
       <td><%= student.pokemon %></td>
       <td><%= student.lucky_number %></td>
+      <td><%= student.birthday.strftime("%m %d %Y") %></td>
     </tr>
   <% end %>
 

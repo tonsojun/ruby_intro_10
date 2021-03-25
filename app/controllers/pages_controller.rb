@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   end
 
   def new
-    @student = Student.new(name: params[:name], hobby: params[:hobby], favorite_food: params[:favorite_food], favorite_color: params[:favorite_color], pokemon: pokemon_name(), lucky_number: lucky_number())
+    @student = Student.new(name: params[:name], hobby: params[:hobby], favorite_food: params[:favorite_food], favorite_color: params[:favorite_color], pokemon: pokemon_name(), lucky_number: lucky_number(), birthday: birthday())
     @student.save
   end
   
@@ -23,6 +23,9 @@ class PagesController < ApplicationController
     rand_number = rand(1..100)
   end
 
+  def birthday
+    birthdate = rand(1..365).days.ago
+  end
 
 
 end

@@ -27,5 +27,10 @@ class PagesController < ApplicationController
     birthdate = rand(1..365).days.ago
   end
 
+  def destroy
+    destroy_student = Student.find(params[:id].destroy)
+  end
+
+
 
 end

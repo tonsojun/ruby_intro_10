@@ -6,6 +6,6 @@ Rails.application.routes.draw do
 
   post 'new', to: 'pages#new'
 
-  delete 'students/:id', to: 'pages#destroy'
+  post 'students/:id', to: 'pages#destroy'
 
 end

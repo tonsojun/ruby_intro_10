@@ -15,6 +15,7 @@
   <%= form.text_field :favorite_color %>
 
   <%= form.submit "Submit" %>
+
 <% end %>
 
 
@@ -39,6 +40,12 @@
       <td><%= student.pokemon %></td>
       <td><%= student.lucky_number %></td>
       <td><%= student.birthday.strftime("%m %d %Y") %></td>
+       <td><%= link_to "Destroy", {action: "destroy", id: student.id}, method: :destroy, data: { confirm: "Are you sure?" } %></td>
+
+      <form action="/students" method="delete">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+        <%= hidden_field_tag :id, student.id -%>
+      </form> 
     </tr>
   <% end %>
 

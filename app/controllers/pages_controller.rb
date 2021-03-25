@@ -28,7 +28,7 @@ class PagesController < ApplicationController
   end
 
   def destroy
-    destroy_student = Student.find(params[:id].destroy)
+    Student.find(params[:id].destroy)
   end
 
 

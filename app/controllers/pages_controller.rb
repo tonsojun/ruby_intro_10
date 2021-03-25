@@ -8,11 +8,17 @@ class PagesController < ApplicationController
   end
 
   def new
-    @student = Student.new(name: params[:name], hobby: params[:hobby])
+    @student = Student.new(name: params[:name], hobby: params[:hobby], favorite_food: params[:favorite_food], favorite_color: params[:favorite_color], pokemon: pokemon_name() )
     @student.save
   end
   
-  
+  def pokemon_name
+    number = rand(1..500)
+    response = HTTParty.get("https://pokeapi.co/api/v2/pokemon/#{number}")
+    body = JSON.parse(response.body)
+    name = body["name"] 
+  end
+
 
 
 end

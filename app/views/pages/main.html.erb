@@ -1,12 +1,18 @@
 <h1>Intro 10</h1>
 
 <%= form_with url: "/new", method: :post do |form| %>
-  <%= form.label :name %>
+
+  <%= form.label "Name" %>
   <%= form.text_field :name %>
 
   <%= form.label :hobby, "Hobby" %>
   <%= form.text_field :hobby %>
 
+  <%= form.label :hobby, "Favorite Food" %>
+  <%= form.text_field :favorite_food %>
+
+  <%= form.label :hobby, "Favorite Color" %>
+  <%= form.text_field :favorite_color %>
 
   <%= form.submit "Submit" %>
 <% end %>
@@ -15,17 +21,22 @@
   <tr>
     <th><%= "Name" %></th>
     <th><%= "Hobby" %></th>
+    <th><%= "Favorite Food" %></th>
+    <th><%= "Favorite Color" %></th>
+    <th><%= "Pokemon" %></th>
   </tr>
 
   <% Student.all.each do |student| %>
     <tr>
       <td><%= student.name %></td>
       <td><%= student.hobby %></td>
+      <td><%= student.favorite_food %></td>
+      <td><%= student.favorite_color %></td>
+      <td><%= student.pokemon %></td>
     </tr>
   <% end %>
 
 </table>
-<%= Student.all %> <br>
 
 <%= Student.count %> <br>
 

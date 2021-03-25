@@ -24,6 +24,7 @@
     <th><%= "Favorite Food" %></th>
     <th><%= "Favorite Color" %></th>
     <th><%= "Pokemon" %></th>
+    <th><%= "Lucky Number" %></th>
   </tr>
 
   <% Student.all.each do |student| %>
@@ -33,6 +34,7 @@
       <td><%= student.favorite_food %></td>
       <td><%= student.favorite_color %></td>
       <td><%= student.pokemon %></td>
+      <td><%= student.lucky_number %></td>
     </tr>
   <% end %>
 
